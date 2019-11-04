@@ -1,0 +1,80 @@
+package View;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import javax.swing.JLabel;
+import java.awt.FlowLayout;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+public class panelLogin {
+
+	private JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					panelLogin window = new panelLogin();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public panelLogin() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 800, 500);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		frame.getContentPane().add(panel, BorderLayout.CENTER);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Login");
+		lblNewLabel.setBounds(239, 140, 69, 20);
+		panel.add(lblNewLabel);
+		
+		textField = new JTextField();
+		textField.setBounds(323, 137, 146, 26);
+		panel.add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblSenha = new JLabel("Senha");
+		lblSenha.setBounds(239, 206, 69, 20);
+		panel.add(lblSenha);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(323, 203, 146, 26);
+		panel.add(textField_1);
+		textField_1.setColumns(10);
+		
+		JButton btnCancelar = new JButton("cancelar");
+		btnCancelar.setBounds(400, 327, 115, 29);
+		panel.add(btnCancelar);
+		
+		JButton btnOk = new JButton("ok");
+		btnOk.setBounds(223, 327, 115, 29);
+		panel.add(btnOk);
+	}
+}
