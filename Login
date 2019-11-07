@@ -1,0 +1,48 @@
+package View;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Login extends Tela{
+	
+	JLabel labelLogin;
+	JLabel labelSenha;
+	JTextField textLogin;
+	JTextField textSenha;
+	JButton buttonOk;
+
+	public Login() {
+		super(200,200);
+		
+		 labelLogin = new JLabel("Login: ");
+		 labelSenha = new JLabel("Senha: ");
+		 textLogin = new JTextField(10);
+		 textSenha = new JTextField(10);
+		 buttonOk = new JButton("ok");
+		 
+		 add(labelLogin);
+		 add(textLogin);
+		 add(labelSenha);
+		 add(textSenha);
+		 add(buttonOk);
+		 
+		 setVisible(true);
+		
+		
+	}
+
+	public JTextField getTextLogin() {
+		return textLogin;
+	}
+
+	public JTextField getTextSenha() {
+		return textSenha;
+	}
+
+	public JButton getButtonOk() {
+		return buttonOk;
+	}
+
+}
+
