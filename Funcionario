@@ -1,0 +1,59 @@
+package View;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+
+public class Funcionario extends Tela {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Funcionario window = new Funcionario();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Funcionario() {
+		super(450,120);
+		
+		JButton btnNewButton = new JButton("Add Paciente");
+		
+		JButton btnNewButton_1 = new JButton("Verificar M\u00E9dicos");
+		
+		JButton btnNewButton_2 = new JButton("Listar Consultas");
+		
+		JButton btnSair = new JButton("Sair");
+		
+		
+		getContentPane().add(btnNewButton);
+		getContentPane().add(btnNewButton_1);
+		getContentPane().add(btnNewButton_2);
+		getContentPane().add(btnSair);
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+}
