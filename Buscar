@@ -1,0 +1,89 @@
+package View;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JList;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+public class Buscar extends Tela {
+
+	private JFrame frame;
+	private JTextField textField;
+	private JTable table;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Buscar window = new Buscar();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Buscar() {
+		super(360, 240);
+		
+		JLabel lblNome = new JLabel("Nome ");
+		
+		getContentPane().add(lblNome);
+		
+		
+		textField = new JTextField();
+		getContentPane().add(textField);
+		textField.setColumns(15);
+		
+		JButton btnNewButton = new JButton("Buscar");
+		
+		
+		JButton btnNewButton_1 = new JButton("Voltar");
+		JButton btnLimpar = new JButton("Limpar");
+		;
+		
+		table = new JTable();
+		table.setToolTipText("Nome\r\nFun\u00E7\u00E3o\r\n");
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+				{"Nome", "ID", "Fun\u00E7\u00E3o", "CPF"},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+			},
+			new String[] {
+				"New column", "New column", "New column", "New column"
+			}
+		));
+		getContentPane().add(btnNewButton);
+		getContentPane().add(table);
+		getContentPane().add(btnNewButton_1);
+		getContentPane().add(btnLimpar);
+		
+		
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+}
