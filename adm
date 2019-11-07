@@ -1,0 +1,40 @@
+package View;
+
+import javax.swing.JButton;
+
+public class Adm extends Tela{
+	
+	JButton buttonFun;
+	JButton buttonMedico;
+	JButton buttonListar;
+	JButton buttonSair;
+	
+	public Adm() {
+		super(380, 120);
+		
+		buttonFun = new JButton("Adicionar Funcionário");
+		buttonListar = new JButton("Listar Funcionário ");
+		buttonSair = new JButton("Sair");
+		
+		
+		add(buttonFun);
+		add(buttonListar);
+		add(buttonSair);
+		
+		setVisible(true);
+		
+	}
+	public JButton getButtonFun() {
+		return buttonFun;
+	}
+	public JButton getButtonListar() {
+		return buttonListar;
+	}
+	public JButton getButtonSair() {
+		return buttonSair;
+	}
+	
+	public static void main(String[] args) {
+		new Adm();
+	}
+}
