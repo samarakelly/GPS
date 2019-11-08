@@ -1,0 +1,26 @@
+package View;
+
+import javax.swing.JButton;
+
+public class Medico extends Tela {
+	
+	JButton buttonConsulta;
+	JButton buttonAgenda;
+	JButton sair;
+	
+
+	public Medico() {
+		super(350, 130);
+		
+		 buttonConsulta = new JButton("Realizar Consulta");
+		 buttonAgenda = new JButton("Consultar Agenda");
+		 sair = new JButton("Sair");
+		 
+		 add(buttonConsulta);
+		 add(buttonAgenda);
+		 add(sair);
+		 
+		 setVisible(true);
+	}
+
+}
